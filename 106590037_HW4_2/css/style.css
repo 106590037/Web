@@ -1,0 +1,248 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+
+/*body*/
+body
+{
+    width: 1280px;
+    height: 960px;
+    font-family: "Arial Black";
+    font-size: 16px;
+    display: flex, block;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/*container*/
+.container
+{
+    margin: 0 60px;
+    padding: 40px 0 0 0;
+}
+
+/*header*/
+.header
+{
+    display: flex;
+    justify-content: center;
+
+}
+.header_logo
+{
+    width: 125px;
+    height: 125px;
+}
+
+/*dividing_line*/
+.dividing_line
+{
+    width: 1180px;
+    height: 1px;
+    margin: 15px 0;
+    background-color: gray;
+}
+
+/*navi*/
+.navi
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navi_LadyM_series
+{
+    display:flex;
+    flex-wrap: nowrap;
+    border: white 1px solid;
+    display: inline-block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 13px;
+}
+.navi_LadyM_series li
+{
+    width:143px;
+    text-align:center;
+    position: relative;
+    white-space: nowrap;
+    border-right: gray 1px solid;
+}
+.navi_LadyM_series > li:last-child
+{
+    border-right: none;
+}
+.navi_LadyM_series > li
+{
+    float: left;
+}
+.navi_LadyM_series a
+{
+    background-color: white;
+    color: rgba(128,128,255);
+    display: block;
+    padding: 0 0px;
+    text-decoration: none;
+    line-height: 40px;
+}
+.navi_LadyM_series a:hover
+{
+    background-color: white;
+    color: gray;
+}
+.navi_LadyM_series li:hover > a
+{
+    background-color: rgba(200,200,255,20);
+    color: gray;
+}
+.navi_LadyM_series ul
+{
+    border: white 1px solid;
+    position: absolute;
+    z-index: 99;
+    left: -1px;
+    top: 100%;
+    min-width: 100px;
+}
+.navi_LadyM_series ul li
+{
+    border-bottom: white 1px solid;
+}
+.navi_LadyM_series ul
+{
+    display: none;
+}
+.navi_LadyM_series li:hover > ul
+{
+    display: block;
+}
+
+/*content*/
+.content
+{
+    display:flex;
+    justify-content: space-between;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+.content
+{
+    display: flex;
+    align-items: center;
+}
+.content_text h3
+{
+    font-size:40px;
+    color: rgb(188, 155, 93);
+    font-weight: bolder; 
+
+}
+.content_text p
+{
+    font-size:20px;
+    color: black;
+}
+
+/*picture*/
+.slider_container {
+    margin: 10px auto;
+    width: 1140px;
+    height: 400px;
+    position: relative;
+    border: 20px solid;    
+    border-color: #fff;
+    border-bottom-width: 100px;
+    background-color: #f5f5f5;
+    box-shadow: #666 0 0 5px;
+}
+
+.slider_container div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.slider_container div {
+    -webkit-animation: round 8s linear infinite;
+            animation: round 8s linear infinite;
+}
+
+@-webkit-keyframes round {
+    10% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    20% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    30% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+@keyframes round {
+    10% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    20% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    30% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+
+.slider_container div:nth-child(4) {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+
+.slider_container div:nth-child(3) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+}
+
+.slider_container div:nth-child(2) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+}
+
+.slider_container div:nth-child(1) {
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+}
+
+
+.slider_container:hover div {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+/*footer*/
+.footer
+{
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+.contact p
+{
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: black;
+    font-size: 20px;
+}
